@@ -1,0 +1,11 @@
+
+
+ALTER TABLE "Reservation" DROP CONSTRAINT "Reservation_pkey",
+DROP COLUMN "createdAt",
+ADD COLUMN     "tel" TEXT NOT NULL,
+ALTER COLUMN "id" DROP DEFAULT,
+ALTER COLUMN "id" SET DATA TYPE TEXT,
+DROP COLUMN "date",
+ADD COLUMN     "date" TIMESTAMP(3) NOT NULL,
+ADD CONSTRAINT "Reservation_pkey" PRIMARY KEY ("id");
+DROP SEQUENCE "Reservation_id_seq";
