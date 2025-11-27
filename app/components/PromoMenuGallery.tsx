@@ -1,80 +1,53 @@
-export default function PromoMenueGallery() {
+export default function ServingCountySection() {
   return (
-    <div className="min-h-screen w-full bg-white px-4 md:px-8 lg:px-16">
+    <div className="w-full min-h-screen bg-gradient-to-b from-[#f4f6ea] via-[#e3e4d2] to-[#dde0c2] pb-16 px-4 md:px-8 lg:px-16">
 
-      {/* Wood Background Container */}
-      <div className="relative rounded-lg max-w-[1200px] mx-auto mt-10 md:mt-16 lg:mt-20 bg-[url('/woo3.jpg')] bg-cover bg-center bg-fixed p-6 md:p-10 lg:p-14 backdrop-blur-md">
+      {/* Heading */}
+      <div className="pt-10 pb-6 flex flex-col items-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-[IrishGrover] text-green-900 text-center leading-tight drop-shadow-sm">
+          proudly serving palm beach county
+        </h1>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-[IrishGrover] text-green-900 text-center mt-2">
+          FOR OVER 25 YEARS!
+        </h2>
+      </div>
 
-        {/* Top Promo Poster Section */}
-        <section className="w-full flex justify-center py-8">
-          <div className="w-full max-w-[700px] rounded-lg overflow-hidden shadow-xl">
-            <img
-              src="/photo/Cheers.jpg"
-              className="w-full h-auto"
-              alt="Promo"
-            />
-          </div>
-        </section>
+      {/* Instagram prompt */}
+      <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[IrishGrover] text-green-800 text-center mt-10 mb-7 underline underline-offset-4 sm:underline-offset-6 md:underline-offset-8 decoration-green-800">
+        check out our instagram page
+      </div>
 
-        {/* Menu Section */}
-        <section className="flex flex-col items-center justify-center py-12">
+      {/* Instagram image showcase */}
+      <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-5 px-2 sm:px-4 mb-5">
+        {[
+          "/asset1.jpg",
+          "/image-asset3.jpg",
+          "/image-asset (2).jpg",
+          "/image-asset-4.jpg",
+        ].map((src, idx) => (
+          <img
+            key={idx}
+            src={src}
+            alt={`Instagram ${idx + 1}`}
+            className="h-48 sm:h-56 md:h-64 w-40 sm:w-48 md:w-56 lg:w-64 object-cover rounded-lg shadow-lg bg-[#f6eee2] transition-transform duration-500 hover:scale-105"
+          />
+        ))}
+      </div>
 
-          {/* Title */}
-          <h2 className="font-[UnifrakturCook] text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-white mb-2 text-center drop-shadow-lg">
-            host a holiday party at paddy mac’s!
-          </h2>
-
-          <div className="text-white mb-6 underline underline-offset-2 tracking-wide cursor-pointer text-sm sm:text-base md:text-lg font-serif">
-            Catering and Events
-          </div>
-
-          {/* Main Container with Ham Background */}
-          <div className="relative w-full bg-[#f8f6ef] flex flex-col items-center py-20 px-2 sm:px-6 md:px-10 overflow-hidden rounded-lg">
-
-            {/* Ham Image Background */}
-            <div
-              className="absolute inset-0 w-full h-full transform scale-150 brightness-90"
-              style={{
-                backgroundImage: "url('/photo/Ham.jpg')",
-                backgroundSize: "cover",
-                backgroundPosition: "bottom",
-              }}
-            ></div>
-
-            {/* Content on Top */}
-            <div className="relative z-10 w-full max-w-4xl flex flex-col items-center">
-
-              {/* Menu Images */}
-              <div className="flex justify-center gap-4 sm:gap-6 md:gap-10 items-start flex-wrap">
-                <img
-                  src="1.jpg"
-                  alt="Menu 1"
-                  className="w-64 sm:w-72 md:w-72 lg:w-80 rounded-md shadow-md border-2 border-white transition-transform duration-500 hover:scale-105"
-                />
-
-                <img
-                  src="2.jpg"
-                  alt="Menu 2"
-                  className="w-64 sm:w-72 md:w-72 lg:w-80 rounded-md shadow-md border-2 border-white transition-transform duration-500 hover:scale-105"
-                />
-              </div>
-
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mt-10">
-                <button className="rounded-full bg-white text-black py-3 px-7 font-serif text-lg font-bold hover:bg-green-100 transition-colors duration-300">
-                  Main Menu
-                </button>
-
-                <button className="rounded-full bg-white text-black py-3 px-7 font-serif text-lg font-bold hover:bg-green-100 transition-colors duration-300">
-                  Paddy's Lunch Menu
-                </button>
-              </div>
-
-            </div>
-
-          </div>
-        </section>
-
+      <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-5 px-2 sm:px-4">
+        {[
+          "/image-asset (5).jpg",
+          "/image-asset (6).jpg",
+          "/image-asset (7).jpg",
+          "/assest8.jpg",
+        ].map((src, idx) => (
+          <img
+            key={idx}
+            src={src}
+            alt={`Instagram ${idx + 5}`}
+            className="h-48 sm:h-56 md:h-64 w-40 sm:w-48 md:w-56 lg:w-64 object-cover rounded-lg shadow-lg bg-[#f6eee2] transition-transform duration-500 hover:scale-105"
+          />
+        ))}
       </div>
 
     </div>
