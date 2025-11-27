@@ -17,7 +17,7 @@ export default function HeroSection() {
         />
 
         {/* Address / Text */}
-        <div className="text-white text-sm md:text-lg lg:text-xl font-serif tracking-wide max-w-[90%] md:max-w-md lg:max-w-lg">
+        <div className="text-white text-sm md:text-lg lg:text-xl font-serif tracking-wide max-w-[90%] md:max-w-md lg:max-w-xl">
           10971 North Military Trail, Palm Beach Gardens, FL 33410
         </div>
       </div>
